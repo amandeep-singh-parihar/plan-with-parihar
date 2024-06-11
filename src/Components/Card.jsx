@@ -13,13 +13,13 @@ function Card({ id, name, info, image, price, removeTour, add, setAdd, tour }) {
 
   function clickHandler() {
     if (add.includes(tour.id)) {
-      setAdd((prev) => prev.filter((tid) => tid !== tour.id));
+      setAdd((curr) => curr.filter((tid) => tid !== tour.id));
       toast.warning("Removed from wishlist");
     } else {
       if (add.length === 0) {
         setAdd([tour.id]);
       } else {
-        setAdd((prev) => [...prev, tour.id]);
+        setAdd((curr) => [...curr, tour.id]);
       }
       toast.success("Added to wishlist");
     }
