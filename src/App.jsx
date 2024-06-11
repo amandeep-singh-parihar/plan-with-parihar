@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import Tours from "./Components/Tours";
 import data from "./Components/data";
+import { toast } from "react-toastify";
+
 
 function App() {
   const [tours, setTours] = useState(data);
@@ -24,7 +26,7 @@ function App() {
   }
 
   return (
-    <div className="min-h-screen bg-[#f4f5f6] flex flex-col justify-center items-center">
+    <div className="min-h-screen bg-[#f4f5f6] flex flex-col ">
       <Tours tours={tours} removeTour={removeTour} />
     </div>
   );
