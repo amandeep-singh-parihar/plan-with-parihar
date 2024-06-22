@@ -31,7 +31,7 @@ function Card({ id, name, info, image, price, removeTour, add, setAdd, tour }) {
   }
 
   return (
-    <div className="card bg-white h-fit w-[300px] rounded-md p-3 shadow-2xl border-2 border-solid overflow-hidden">
+    <div className="card bg-white h-fit w-[300px] rounded-md p-3 shadow-xl hover:shadow-2xl ease-linear transition-all border-2 border-solid overflow-hidden">
       <div className="relative">
         <img
           className="image bg-zinc-500 rounded-sm h-[40vh] w-full object-cover object-[0%_28%]"
