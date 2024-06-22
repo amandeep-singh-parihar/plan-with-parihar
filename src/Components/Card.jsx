@@ -34,13 +34,13 @@ function Card({ id, name, info, image, price, removeTour, add, setAdd, tour }) {
     <div className="card bg-white h-fit w-[300px] rounded-md p-3 shadow-2xl border-2 border-solid overflow-hidden">
       <div className="relative">
         <img
-          className="image bg-zinc-500 rounded-sm h-[40vh] w-full object-cover object-center object-[0%_28%]"
+          className="image bg-zinc-500 rounded-sm h-[40vh] w-full object-cover object-[0%_28%]"
           src={image}
         />
         <div>
           <button
             onClick={clickHandler}
-            className="like-button w-[30px] h-[30px] rounded-full absolute bg-white grid place-items-center border border-rose-400 right-[12px] bottom-[-16px] grid place-items-center"
+            className="like-button w-[30px] h-[30px] rounded-full absolute bg-white border border-rose-400 right-[12px] bottom-[-16px] grid place-items-center"
           >
             {add.includes(id) ? (
               <FcLike fontSize="1.25rem" />
