@@ -13,15 +13,32 @@ function Card({ id, name, info, image, price, removeTour, add, setAdd, tour }) {
 
     function clickHandler() {
         if (add.includes(tour.id)) {
+            /*
+             add.includes(tour.id) checks if tour.id is already inside the add array.
+             If yes, it means the tour is already in the wishlist, so we need to remove it.
+             */
             setAdd((curr) => curr.filter((tid) => tid !== tour.id));
             toast.warning("Removed from wishlist");
+            /*
+            .filter((tid) => tid !== tour.id) removes tour.id from the add array by keeping only the IDs that are not equal to tour.id.
+            toast.warning("Removed from wishlist") shows a warning message.
+            */
         } else {
             if (add.length === 0) {
                 setAdd([tour.id]);
+                /*
+                If add.length === 0, it means the wishlist is empty, so we set it to [tour.id].
+                Otherwise, we update the array by adding the new tour.id
+                */
             } else {
                 setAdd((curr) => [...curr, tour.id]);
+                /*
+                 curr represents the current state (add array).
+                [...] spreads the existing IDs and adds the new one.
+                 */
             }
             toast.success("Added to wishlist");
+            // toast.success("Added to wishlist") displays a success message.
         }
     }
 
